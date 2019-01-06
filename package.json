@@ -1,0 +1,34 @@
+{
+  "name": "django-drf-react-quickstart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --mode development ./project/frontend/src/index.js --output ./project/frontend/static/generated/main.js --watch",
+    "build": "webpack --mode production ./project/frontend/src/index.js --output ./project/frontend/static/generated/main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "webpack": "^4.28.3",
+    "webpack-cli": "^3.2.0"
+  },
+  "dependencies": {
+    "konva": "^2.6.0",
+    "react-canvas-draw": "^1.0.0",
+    "react-konva": "^16.7.1",
+    "react-redux": "^5.0.7",
+    "reactstrap": "^7.0.2",
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.3.0"
+  }
+}
