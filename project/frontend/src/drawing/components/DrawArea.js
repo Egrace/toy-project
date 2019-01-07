@@ -1,5 +1,5 @@
 import React from 'react';
-import {Stage, Layer, Line} from 'react-konva';
+import {Stage, Layer, Line, Rect} from 'react-konva';
 import DrawingActions from "../actions/DrawingActions";
 import {connect} from "react-redux";
 import DrawingSelectors from "../selectors/DrawingSelectors";
@@ -21,7 +21,10 @@ const mapDispatchToProps = (dispatch) => {
 
 class DrawArea extends React.Component {
   getImage() {
-    return this.refs.stage.toDataURL();
+    return this.refs.stage.getStage().toDataURL({
+      mimeType: 'image/jpeg',
+      quality: 1
+    });
   }
 
   _onMouseDown = (e) => {
@@ -44,7 +47,7 @@ class DrawArea extends React.Component {
       return (
         <Line
           stroke='black'
-          strokeWidth={10}
+          strokeWidth={24}
           points={shape.flattenPoints()}
           key={`shape-${index}`}
           lineCap='round'
@@ -64,6 +67,7 @@ class DrawArea extends React.Component {
           onMouseMove={this._onMouseMove}
           ref='stage'>
           <Layer>
+            <Rect width={301} height={301} x={0} y={0} fill='#fff'/>
             {this._renderShapes()}
           </Layer>
         </Stage>

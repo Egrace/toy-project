@@ -6,7 +6,14 @@ const recognize = () => (dispatch, getState) => {
   if (!image)
     return;
 
-  return fetch('recognize_digit', { method: 'POST', body: { image } })
+  return fetch('recognize_digit', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    },
+    body: JSON.stringify({ image })
+  })
     .then(response => response.json())
     .then(result => dispatch(DigitsRecognizerActions.digitRecognized(result)))
 };
