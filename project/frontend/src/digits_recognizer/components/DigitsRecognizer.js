@@ -33,7 +33,7 @@ class DigitsRecognizer extends React.Component {
     return (
       <main role="main" className="container container--primary">
         <div className='py-5 text-center'>
-          <h2>Simple digit recognizer</h2>
+          <h2>Simple Digit Recognizer</h2>
           <p className='lead'>
             This is the simple digit recognizer. Try to draw something below and click 'Recognize' button
           </p>
@@ -57,7 +57,7 @@ class DigitsRecognizer extends React.Component {
             color='danger'
             onClick={this.props.onResetClick}
             className='btn-block mb-3'>
-            Reset
+            Clear
           </Button>
         </div>
       </main>
