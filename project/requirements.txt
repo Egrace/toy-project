@@ -7,7 +7,7 @@ decorator==4.3.0
 Django==2.1.5
 django-bootstrap4==0.0.7
 django-rest-framework==0.1.0
-djangorestframework==3.9.0
+djangorestframework==3.11.2
 gast==0.2.1
 grpcio==1.17.1
 h5py==2.9.0
